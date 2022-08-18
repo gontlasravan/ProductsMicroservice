@@ -1,0 +1,22 @@
+app:
+    name: Products
+    description: This ${products} app provide apis for fetch,insert products from mongo products Collection.
+server:
+       port: 8082
+
+spring:
+       profiles:
+                active: test
+       data:
+           mongodb:
+                   host: localhost
+                   port: 27017
+                   database: products_db_wrong
+
+           cache:
+                 type: redis
+                 redis:
+                       cache-null-values: true
+                       time-to-live: 40000
+                       port : 6379
+
